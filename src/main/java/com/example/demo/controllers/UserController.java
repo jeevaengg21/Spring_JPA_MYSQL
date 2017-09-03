@@ -24,8 +24,8 @@ public class UserController {
     /**
      * /create --> Create a new user and save it in the database.
      *
-     * @param email User's email
-     * @param name User's name
+     * @param fname User's fname
+     * @param lname User's lname
      * @return A string describing if the user is succesfully created or not.
      */
     @RequestMapping("/create")
@@ -60,14 +60,14 @@ public class UserController {
     }
 
     /**
-     * /get-by-email --> Return the id for the user having the passed email.
+     * /get-by-fname --> Return the id for the user having the passed fname.
      *
-     * @param email The email to search in the database.
+     * @param fname The fname to search in the database.
      * @return The user id or a message error if the user is not found.
      */
     @RequestMapping("/get-by-name")
     @ResponseBody
-    public String getByEmail(String fname) {
+    public String getByFname(String fname) {
         String userId;
         try {
             User user = userDao.findByFname(fname);
@@ -92,12 +92,12 @@ public class UserController {
     }
 
     /**
-     * /update --> Update the email and the name for the user in the database
+     * /update --> Update the fname and the name for the user in the database
      * having the passed id.
      *
      * @param id The id for the user to update.
-     * @param email The new email.
-     * @param name The new name.
+     * @param fname The new fname.
+     * @param lname The new name.
      * @return A string describing if the user is succesfully updated or not.
      */
     @RequestMapping("/update")
