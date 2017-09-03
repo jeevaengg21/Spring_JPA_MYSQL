@@ -3,7 +3,9 @@ Spring_JPA_MYSQL
 # Prerequisite
 
 Eclipse / Netbeans or your favourite IDE for Java
+
 Maven
+
 Mysql Server
 
 # Run & Test
