@@ -109,7 +109,7 @@ public class UserController {
             user.setLname(lname);
             userDao.save(user);
         } catch (Exception ex) {
-            return "Error updating the user: " + ex.toString();
+            return "Error updating the user:" + ex.toString();
         }
         return "User succesfully updated!";
     }
